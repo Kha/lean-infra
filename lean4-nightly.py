@@ -19,12 +19,19 @@ def main():
         lines = r.body.splitlines()[1:]
         lines = lines[:lines.index("*Full commit log*")]
         body = "\n".join(lines).strip()
-        if body:
-            LIMIT = 280 - 10  # for unclear reasons
-            if len(body) >= LIMIT - 23 - len("\n\n"):
-                body = body[:LIMIT - 23 - len("\n\n") - len(" [...]")] + " [...]"
-            body += "\n\n" + r.html_url
-            client.create_tweet(text=body)
+        prev = None
+        for bullet in re.split(r"^\* ", body, flags=re.MULTILINE):
+            if bullet:
+                limit = 280 - 10  # for unclear reasons
+                LINK_LEN = 23
+                if not prev:
+                    limit -= 23 + len("\n\n")
+                if len(bullet) >= limit:
+                    bullet = bullet[:limit - len(" [...]")] + " [...]"
+                if not prev:
+                    bullet += "\n\n" + r.html_url
+                resp = client.create_tweet(text=bullet, in_reply_to_tweet_id=prev)
+                prev = resp.data['id']
 
 if __name__ == '__main__':
     main()
