@@ -2,20 +2,41 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1642522226,
-        "narHash": "sha256-m/j9U8KYuwwxjwgRCjmEj8ejftvdMLJ+NGXh/L2I4FU=",
-        "path": "/nix/store/k24zabz0ila1rvgxr43kf8ckly21k4qp-source",
-        "rev": "610d4ea2750e064bf34b33fa38cb671edd893d3d",
-        "type": "path"
+        "lastModified": 1646933238,
+        "narHash": "sha256-RZJnLN0o4B35eTnUc2tEAD12X5TNeeJhhvH3Fd6Pmdo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "bacbfd713b4781a4a82c1f390f8fe21ae3b8b95b",
+        "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "NixOS",
+        "ref": "nixos-21.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "python-zulip-api-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1647259020,
+        "narHash": "sha256-OrNdSvzk1i8sOIauCQHKS6ZhXxgqDBvYV2zZuPlv4uc=",
+        "owner": "Kha",
+        "repo": "python-zulip-api",
+        "rev": "a9fa9b401bd499a999909daa2fe8dc8858631e05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Kha",
+        "ref": "lean",
+        "repo": "python-zulip-api",
+        "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "python-zulip-api-src": "python-zulip-api-src"
       }
     }
   },
