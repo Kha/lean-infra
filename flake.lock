@@ -19,11 +19,11 @@
     "python-zulip-api-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1647259020,
-        "narHash": "sha256-OrNdSvzk1i8sOIauCQHKS6ZhXxgqDBvYV2zZuPlv4uc=",
+        "lastModified": 1647464123,
+        "narHash": "sha256-kdY/4jAHHzqVhe+pbo03ellUV5VGAUnNCL3QzqBGYpA=",
         "owner": "Kha",
         "repo": "python-zulip-api",
-        "rev": "a9fa9b401bd499a999909daa2fe8dc8858631e05",
+        "rev": "9c0c7e55e264b9e8ca1983e56a992d6727f12162",
         "type": "github"
       },
       "original": {
