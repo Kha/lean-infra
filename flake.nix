@@ -51,7 +51,7 @@ EOF
 
     nixosModule.config = {
       systemd.services.lean4-nightly-bot = {
-        startAt = "08:00 UTC";  # CI runs at 07:00 UTC
+        startAt = "08:30 UTC";  # CI runs at 07:00 UTC
         # override in machine config
         #environment = { "CONSUMER_KEY" = ""; "CONSUMER_SECRET" = ""; "ACCESS_TOKEN" = ""; "ACCESS_TOKEN_SECRET" = ""; }
         # should probably use serviceConfig.SetCredentialEncrypted starting with systemd v250
