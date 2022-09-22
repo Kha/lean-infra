@@ -69,6 +69,7 @@ EOF
           DynamicUser = true;
           StateDirectory = "rss-bot";
           ExecStart = "${packages.${system}.rss-bot}/bin/rss-bot --feed-file=${./rss-feeds} --data-dir=\${STATE_DIRECTORY}";
+          TimeoutSec = "5min";
         };
       };
     };
