@@ -68,6 +68,7 @@ EOF
         serviceConfig = {
           DynamicUser = true;
           StateDirectory = "rss-bot";
+          Type = "exec";
           ExecStart = "${packages.${system}.rss-bot}/bin/rss-bot --feed-file=${./rss-feeds} --data-dir=\${STATE_DIRECTORY} --pr-links";
           TimeoutSec = "5min";
         };
